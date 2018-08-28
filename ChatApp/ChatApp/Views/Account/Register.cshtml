@@ -1,0 +1,47 @@
+﻿@model ChatApp.ViewModels.RegisterViewModel
+
+<div class="mt-5">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-6">
+                <div class="col-md-12">
+                    <form class="form-signin" id="register-form" asp-action="Register" method="post">
+                        <div class="text-center">
+                            <span style="color: black;"><i class="far fa-comments fa-lg fa-fw"></i></span> <span class="h3 mb-3"><span class="text-warning font-weight-bold">Chat</span>App</span>
+                            <p class="h3 mb-3 font-weight-normal display-4">Create an account</p>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Login"></label>
+                            <input class="form-control d-block" style="width: 100%" asp-for="Login" placeholder="Login" />
+                            <span asp-validation-for="Login" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Password"></label>
+                            <input type="password" class="form-control d-block showpassword" style="width: 100%" asp-for="Password" placeholder="Password" />
+                            <small class="form-text text-muted">Password must be/have at least: 6 characters, one non alphanumeric character, one digit ('0'-'9'), one uppercase ('A'-'Z')</small>
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="RepeatPassword"></label>
+                            <input type="password" class="form-control d-block showpassword" style="width: 100%" asp-for="RepeatPassword" placeholder="Repeat Password" />
+                            <span asp-validation-for="RepeatPassword" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Email"></label>
+                            <input class="form-control d-block" style="width: 100%" asp-for="Email" placeholder="E-mail" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-secondary" type="button" name="showpassword" id="showpassword" value="Show Password">Show Password</button>
+                            <button type="submit" class="btn btn-warning">Register</button>
+                        </div>
+                    </form>
+                    <div class="text-justify">
+                        Already registered? <a asp-action="Login" class="link">Log In</a>
+                    </div>
+                    <p class="mt-5 mb-3 text-muted text-center"> The ChatApp | @DateTime.Now.Year</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

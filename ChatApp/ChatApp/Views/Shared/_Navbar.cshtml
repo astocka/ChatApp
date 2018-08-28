@@ -1,0 +1,24 @@
+﻿<header>
+    <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark border border-warning shadow p-3 mb-5 rounded">
+        <a class="navbar-brand mb-0 h1 text-light" asp-controller="Home" asp-action="Index"> <span style="color: white;"><i class="far fa-comments fa-lg fa-fw"></i></span> <span class="navbar-brand mb-0 h1"><span class="text-warning">Chat</span>App</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-lg-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" asp-controller="Home" asp-action="Index">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" asp-controller="Home" asp-action="ManageChannels">Channels</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" asp-controller="Home" asp-action="CreateChannel">Create channel</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" asp-controller="Account" asp-action="LogOut">Log out</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
